@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.2.5/gridlex.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <title>Modal Example</title>
+    <style>
+      html, body {
+        margin: 0; padding: 0;
+        height: 100%;
+        min-height: 100%;
+        overflow: auto;
+        font-family: 'Roboto', sans-serif;
+      }
+      .parent {
+        height:100%;
+        width: 100%;
+        overflow: auto;
+      }
+      .gradient-background {
+        background: -moz-linear-gradient(270deg, #B10AFF 0%, #B10AFF 43%, #7040FF 100%); /* ff3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B10AFF), color-stop(43%, #B10AFF), color-stop(100%, #7040FF)); /* safari4+,chrome */
+        background: -webkit-linear-gradient(270deg, #B10AFF 0%, #B10AFF 43%, #7040FF 100%); /* safari5.1+,chrome10+ */
+        background: -o-linear-gradient(270deg, #B10AFF 0%, #B10AFF 43%, #7040FF 100%); /* opera 11.10+ */
+        background: -ms-linear-gradient(270deg, #B10AFF 0%, #B10AFF 43%, #7040FF 100%); /* ie10+ */
+        background: linear-gradient(180deg, #B10AFF 0%, #B10AFF 43%, #7040FF 100%); /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B10AFF', endColorstr='#7040FF',GradientType=0 ); /* ie6-9 */
+      }
+      .gradient-button {
+        background: -moz-linear-gradient(0deg, rgba(10,255,162,1) 0%, rgba(118,225,255,1) 100%); /* ff3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(10,255,162,1)), color-stop(100%, rgba(118,225,255,1))); /* safari4+,chrome */
+        background: -webkit-linear-gradient(0deg, rgba(10,255,162,1) 0%, rgba(118,225,255,1) 100%); /* safari5.1+,chrome10+ */
+        background: -o-linear-gradient(0deg, rgba(10,255,162,1) 0%, rgba(118,225,255,1) 100%); /* opera 11.10+ */
+        background: -ms-linear-gradient(0deg, rgba(10,255,162,1) 0%, rgba(118,225,255,1) 100%); /* ie10+ */
+        background: linear-gradient(90deg, rgba(10,255,162,1) 0%, rgba(118,225,255,1) 100%); /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affa2', endColorstr='#76e1ff',GradientType=1 ); /* ie6-9 */
+      }
+      .center-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center-absolute {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+      h1 {
+        margin-bottom: 0;
+      }
+      .form-parent {
+        width: 21em;
+        padding: 1em;
+      }
+      .form {
+        margin-top:3em;
+      }
+      .input-text {
+        background-color: transparent;
+        color: white;
+        border: 0;
+        /*border-bottom: 1px solid #76e1ff;*/
+        border-bottom: 1px solid white;
+      }
+      ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+          color:    white;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+         color:    white;
+         opacity:  1;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+         color:    white;
+         opacity:  1;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+         color:    white;
+      }
+      .input-text:hover, .input-text:focus, .input-submit {
+        outline: 0 !important;
+      }
+      .input-text:hover, .input-text:focus {
+        border-color: #96f8ff;
+      }
+      .input {
+        padding: 8px 0px;
+        margin-top: 4px;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+      }
+      .input:not(.input-submit) {
+        width: 100%;
+      }
+      .input-submit {
+        margin-top: 2em;
+        cursor: pointer;
+        border-radius: 40px;
+        border: 0px;
+        letter-spacing: 1px;
+        padding: 9px 28px;
+        padding-right: 20px;
+        color: #424242;
+        float: right;
+      }
+      .input-submit:hover {
+        color: #272727;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent gradient-background">
+
+    <div class="form-parent center-absolute">
+      <h1 style="color:white">&lt;Visual Code/&gt;</h1>
+      <p  style="color:white">Please insert username and password</p>
+      <form class="form">
+        <input type="text" placeholder="Username" class="input input-text" required>
+        <input type="password" placeholder="Password" class="input input-text" required>
+        <input type="submit" class="input input-submit gradient-button" value="Login &#10230;">
+      </form>
+    </div>
+  </body>
+  <script>
+    $('document').ready(function() {
+      //modalFullFixed.style();
+    });
+  </script>
+</html>
